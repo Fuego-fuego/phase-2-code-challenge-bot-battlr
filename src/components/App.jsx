@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import BotCollection from "./BotCollection"
+import BotArmy from "./BotArmy"
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="main | bg-primary-800">
+     <div className="container">
+      <h1 className="fs-primary-heading  text-accent-100 capitalize">
+        <span className="accent">b</span>ot 
+         <span className="accent uppercase">b</span>attler
+        </h1>
+        <p className="capitalize text-primary-500">build your bot army</p>
+      
+      <div className="army-container | bg-primary-700">
+        <BotCollection/>
+        <BotArmy/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+     </div>
+    </main>
   )
 }
 
